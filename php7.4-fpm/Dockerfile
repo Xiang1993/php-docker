@@ -4,7 +4,7 @@ FROM php:7.4-fpm
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# 设置阿里云镜像源
+# 设置镜像源
 RUN cat /dev/null > /etc/apt/sources.list
 RUN echo '\
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main non-free contrib \n\

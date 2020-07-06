@@ -27,6 +27,9 @@ RUN set -eux; \
     # 安装 opcache
     docker-php-ext-install opcache; \
 
+    # 安装 zip 扩展
+    docker-php-ext-install zip; \
+
     # 安装 pdo_mysql 扩展
     docker-php-ext-install pdo_mysql; \
 

@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install -y \
         zip \
         pdo_mysql \
         pdo_pgsql \
-        pgsql
+        pgsql \
+        bcmath
 
 RUN pecl install redis memcached \
     && docker-php-ext-enable redis memcached

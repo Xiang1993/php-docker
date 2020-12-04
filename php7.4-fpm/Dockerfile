@@ -41,5 +41,8 @@ RUN set -eux; \
     docker-php-ext-install gd; \
     php -r 'var_dump(gd_info());' \
 
+    # 安装bcmath
+    docker-php-ext-install bcmath;
+
 # 清理缓存和无用软件
 RUN rm -rf /var/lib/apt/lists/* && apt-get -y autoclean && apt-get -y clean && apt-get -y autoremove
